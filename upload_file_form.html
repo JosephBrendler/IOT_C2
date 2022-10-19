@@ -1,0 +1,19 @@
+<!-- My first form for IOT data upload from ESP8266.
+     Note: The data encoding type, enctype, MUST be specified as below
+           MAX_FILE_SIZE must precede the file input field
+           Name of input element determines name in $_FILES array
+           POSTed from data is handled by the php script specified by
+             action="/IOT_C2/upload_handler.php"
+             which is a path relative to the webserver root
+-->
+<form method="POST" enctype="multipart/form-data" action="/IOT_C2/upload_handler.php" >
+    <center>
+        <label for="file">Upload this file:  </label>
+        <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
+        <input type="file" name="filename" />
+    </center>
+    <br><br>
+    <center>
+        <input class="button" type="submit" value="Upload" />
+    </center>
+</form>

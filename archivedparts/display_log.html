@@ -1,0 +1,28 @@
+<!-- 
+   Attempting to create a web page that will simply display
+   the contents of my log file
+-->
+<!DOCTYPE html>
+<style>
+.color-box {
+  background-color: green;
+  width: 50px;
+  height: 20px;
+}
+</style>
+<html>
+<head>
+  <title>Motion Sensor Log File</title>
+  <meta http-equiv="refresh" content="5">
+  <body>
+    <h2>Here's my sensor data</h2>
+    <p>This should refresh every 5 seconds.</p>
+    <div class="color-box"></div>
+    <div id="list">
+      <p><iframe src="./uploads/data.dat" frameborder="0" height="400" width="95%">
+         </iframe>
+      </p>
+    </div>
+  </body>
+</head>
+</html>
